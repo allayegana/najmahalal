@@ -6,11 +6,15 @@
     <title>Najma Halal Store - Home</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+
+
+
 </head>
 <body>
     <header>
         <h1>Welcome to Najma Halal Store</h1>
-        <nav>
+        <nav class="fixed-top">
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -22,25 +26,133 @@
             </ul>
         </nav>
     </header>
+    
     <main>
         <section class="intro">
             <p>Welcome to the official website of Najma Halal Store, your trusted mini-market for fresh halal products and grocery items. Visit our store for the best deals!</p>
-            <a href="contact.html" class="button">Contact Us <i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <!-- Cards Section -->
+        <section class="card-container">
+            <!-- Card with Carousel -->
+            <div class="card">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="http://www.halalmeat2u.com/uploads/5/6/4/7/5647828/7591816_orig.jpg" class="carousel-image" alt="Product Image 1">
+                        <img src="http://www.halalmeat2u.com/uploads/5/6/4/7/5647828/454170_orig.jpg" class="carousel-image" alt="Product Image 2" style="display:none;">
+                        <img src="http://www.halalmeat2u.com/uploads/5/6/4/7/5647828/1421280740.png" class="carousel-image" alt="Product Image 3" style="display:none;">
+                    </div>
+                    <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
+                    <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
+                </div>
+                <div class="card-content">
+                    <h3>Fresh Halal Meat</h3>
+                    <p>Get the freshest halal meat at our store. Sourced locally and handled with care.</p>
+                    <a href="contact.html" class="button">Contact Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Repeat for each card -->
+            <div class="card">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="https://shopperintelligence.com/wp-content/uploads/2021/07/Organic-fruits-and-vegetables.jpg" class="carousel-image" alt="Product Image 1">
+                        <img src="https://parade.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTkwNTgxNDMzNjk2OTIxNDY4/grocery-stores-with-organic-produce-jpg.webp" class="carousel-image" alt="Product Image 2" style="display:none;">
+                        <img src="https://www.skh.com/wp-content/uploads/2020/01/iStock-1155240408-1-800x500.jpg" class="carousel-image" alt="Product Image 3" style="display:none;">
+                    </div>
+                    <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
+                    <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
+                </div>
+                <div class="card-content">
+                    <h3>Organic Vegetables</h3>
+                    <p>Find a variety of organic vegetables and fresh produce at Najma Halal Store.</p>
+                    <a href="contact.html" class="button">Shop Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="https://i0.wp.com/mostlyamelie.com/wp-content/uploads/2020/05/vegan-grocery-list.jpg?resize=1024%2C768&ssl=1" class="carousel-image" alt="Product Image 1">
+                        <img src="https://ufcw328.org/wp-content/uploads/2020/04/Shopping.jpg" class="carousel-image" alt="Product Image 2" style="display:none;">
+                        <img src="https://i.abcnewsfe.com/a/9d7b8306-3a18-49c8-a8aa-df933cba4921/grocery-store-florida-gty-jt-220803_1659550873827_hpEmbed_4x3.jpg?w=750" class="carousel-image" alt="Product Image 3" style="display:none;">
+                    </div>
+                    <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
+                    <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
+                </div>
+                <div class="card-content">
+                    <h3>Grocery Essentials</h3>
+                    <p>All your daily grocery essentials under one roof. Quality guaranteed!</p>
+                    <a href="contact.html" class="button">Shop Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- New Beverage Card -->
+            <div class="card">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="https://i.imgur.com/uLgGfIh.jpg" class="carousel-image" alt="Beverage Image 1">
+                        <img src="https://i.imgur.com/Y4nFmyA.jpg" class="carousel-image" alt="Beverage Image 2" style="display:none;">
+                        <img src="https://i.imgur.com/YK4Yrks.jpg" class="carousel-image" alt="Beverage Image 3" style="display:none;">
+                    
+                    </div>
+                    <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
+                    <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
+                </div>
+                <div class="card-content">
+                    <h3>Beverages</h3>
+                    <p>Refreshing drinks and beverages available. Perfect for any occasion!</p>
+                    <a href="contact.html" class="button">Shop Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Najma Halal Store. All rights reserved.</p>
     </footer>
 
     <script>
-        function toggleMenu() {
-            var navLinks = document.getElementById('navLinks');
-            if (navLinks.style.display === 'block') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'block';
-            }
+        // Carousel functionality with auto-play
+        function nextSlide(button) {
+            let carousel = button.parentElement;
+            let images = carousel.querySelectorAll('.carousel-image');
+            let currentIndex = Array.from(images).findIndex(image => image.style.display !== 'none');
+            images[currentIndex].style.display = 'none';
+            let nextIndex = (currentIndex + 1) % images.length;
+            images[nextIndex].style.display = 'block';
         }
+
+        function prevSlide(button) {
+            let carousel = button.parentElement;
+            let images = carousel.querySelectorAll('.carousel-image');
+            let currentIndex = Array.from(images).findIndex(image => image.style.display !== 'none');
+            images[currentIndex].style.display = 'none';
+            let prevIndex = (currentIndex - 1 + images.length) % images.length;
+            images[prevIndex].style.display = 'block';
+        }
+
+        // Auto-play functionality
+        function autoPlayCarousel() {
+            let carousels = document.querySelectorAll('.carousel');
+            carousels.forEach(carousel => {
+                let images = carousel.querySelectorAll('.carousel-image');
+                let currentIndex = Array.from(images).findIndex(image => image.style.display !== 'none');
+                images[currentIndex].style.display = 'none';
+                let nextIndex = (currentIndex + 1) % images.length;
+                images[nextIndex].style.display = 'block';
+            });
+        }
+
+        // Run auto-play every 3 seconds
+        setInterval(autoPlayCarousel, 3000);
+
+        // Menu toggle for mobile
+        function toggleMenu() {
+    var navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('open'); // Toggles the 'open' class
+}
+
     </script>
 </body>
 </html>

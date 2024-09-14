@@ -3,66 +3,96 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('https://as1.ftcdn.net/v2/jpg/03/64/23/64/1000_F_364236488_UqRXJQRD187pKQmosbfhohRMFVUoxoaH.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-/* Header Styles */
-header {
-    background-color: rgba(0, 77, 64, 0.8);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
-}
-
-header h1 {
+h1 {
     margin: 0;
     font-size: 2.5em;
-    animation: slideDown 1.5s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation for h1 */
 }
 
-/* Navigation Styles */
+/* Ensure full-width header and fixed position */
+header {
+    width: 100%;
+    position: fixed; /* Keep the header at the top */
+    top: 0;
+    z-index: 1001; /* Make sure the header is above other content */
+    background-color: #004d40; /* Consistent background color */
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+/* Improved navigation styling */
 nav {
+    width: 100%; /* Full width to contain the menu icon and links */
     position: relative;
 }
 
+.menu-icon {
+    display: block; /* Always display the menu icon on mobile */
+    position: absolute;
+    right: 10px; /* Position to the right */
+    top: 10px; /* Position from the top */
+    z-index: 1002; /* Above the content */
+    color: white; /* Icon color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
 .nav-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    display: none; /* Hide links initially on mobile */
+    background-color: #004d40; /* Background of the dropdown */
+    position: absolute;
+    width: 100%; /* Full width */
+    top: 50px; /* Below the header */
+    left: 0;
+    text-align: center; /* Center the links */
 }
 
 .nav-links li {
-    display: inline-block;
-    margin: 0 15px;
-    animation: fadeIn 1.5s ease-in-out;
+    display: block; /* Stack links vertically */
+    padding: 10px; /* Padding for touch accessibility */
 }
 
 .nav-links li a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Text color */
+    text-decoration: none; /* No underline */
     font-size: 1.2em;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #ff9800;
+    color: #ff9800; /* Hover effect */
 }
 
-/* Mobile Menu Icon */
-.menu-icon {
-    display: none;
-    font-size: 2em;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    animation: slideDown 1.5s ease-in-out;
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .menu-icon {
+        display: none; /* Hide the menu icon on desktops */
+    }
+
+    .nav-links {
+        display: flex; /* Flex display for horizontal alignment on desktop */
+        justify-content: center; /* Center the navigation links */
+        position: static; /* Remove absolute positioning for desktop */
+        background-color: transparent; /* Remove background color */
+    }
+
+    .nav-links li {
+        margin: 0 15px; /* Horizontal spacing between links */
+    }
 }
 
-/* Button Animations */
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 100px 20px 50px; /* Space below the fixed header */
+    margin-top: 60px; /* Ensure space below the fixed header */
+}
+
+/* Button */
 .button {
     display: inline-block;
     background-color: #004d40;
@@ -70,65 +100,126 @@ nav {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add animation to button */
 }
 
 .button:hover {
     background-color: #ff9800;
-    transform: scale(1.05); /* Slightly enlarges the button on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
 }
 
-/* Footer Styles */
+/* Cards Section */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out; /* Add fade-in animation for cards */
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for card hover effect */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow increase on hover */
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+}
+
+.carousel-images {
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    transition: opacity 1s ease; /* Smooth transition between images */
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* Footer */
 footer {
-    background-color: rgba(0, 77, 64, 0.8);
+    background-color: #004d40;
     color: white;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
-/* About Page Styles */
-.about {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 20px;
-    border-radius: 10px;
-    animation: fadeIn 1.5s ease-in-out;
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #004d40;
+        margin-top: 50px; /* Push down for mobile */
+        padding: 10px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-/* Location Info Styles */
-.location-info {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 20px;
-    border-radius: 10px;
-    animation: slideUp 1.5s ease-in-out;
-}
-
-.location-info p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-/* Map Container */
-.map-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    animation: slideUp 1.5s ease-in-out;
-}
-
-iframe {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Keyframes for Animations */
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -137,65 +228,14 @@ iframe {
         opacity: 1;
     }
 }
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+/* Centering location info */
+.location-info {
+    text-align: center;
+    margin: 50px 0;
 }
 
-@keyframes slideUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.location-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-    
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: rgba(0, 77, 64, 0.9);
-        animation: slideDown 1s ease-in-out; /* Mobile menu animation */
-    }
-    
-    .nav-links li {
-        display: block;
-        margin: 10px 0;
-    }
-    
-    .nav-links li a {
-        font-size: 1.5em;
-    }
-
-    .about, .location-info {
-        padding: 15px;
-        margin: 10px;
-        font-size: 1.1em;
-    }
-
-    iframe {
-        width: 100%;
-        height: 300px;
-    }
-
-    main {
-        padding: 20px;
-    }
-}

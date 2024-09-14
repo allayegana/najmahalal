@@ -6,24 +6,89 @@
     <title>Najma Halal Store - Contact</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+/* Card Container for Contact Section */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full page height */
+    padding-top: 100px; /* Padding to account for the fixed header */
+}
+
+.contact-card {
+    background-color: #004d40; /* Card background color */
+    color: white; /* Text color */
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Full width for smaller screens */
+}
+
+.contact-card h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.contact-card p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.contact-card a {
+    color: #ff9800; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #ffd740;
+}
+
+.contact-card i {
+    margin-right: 10px;
+}
+
+</style>
 </head>
 <body>
     <header>
         <h1>Contact Us</h1>
         <nav>
-            <a href="index.html"><i class="fas fa-home"></i> Home</a>
-            <a href="location.html"><i class="fas fa-map-marker-alt"></i> Location</a>
-            <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
-            <a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="location.html"><i class="fas fa-map-marker-alt"></i> Location</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <h2>Get in Touch</h2>
-        <p><i class="fas fa-phone-alt"></i> Phone: 206-466-8118</p>
-        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:dolletrading@gmail.com">dolletrading@gmail.com</a></p>
+        <!-- Contact Card Section -->
+        <div class="card-container">
+            <div class="contact-card">
+                <h2>Get in Touch</h2>
+                <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:206-466-8118">206-466-8118</a></p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:dolletrading@gmail.com">dolletrading@gmail.com</a></p>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Najma Halal Store. All rights reserved.</p>
     </footer>
+
+    <script>
+         
+        function toggleMenu() {
+        var navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('open');
+    }
+
+</script>
 </body>
 </html>
