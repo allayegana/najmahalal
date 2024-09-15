@@ -4,91 +4,292 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najma Halal Store - Contact</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
     <style>
-/* Card Container for Contact Section */
-.card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full page height */
-    padding-top: 100px; /* Padding to account for the fixed header */
-}
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-.contact-card {
-    background-color: #004d40; /* Card background color */
-    color: white; /* Text color */
-    border-radius: 10px;
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%; /* Full width for smaller screens */
-}
+        /* Header Styles */
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1001;
+            background-color: #004d40;
+            padding: 10px 0;
+            color: white;
+            display: flex;
+            justify-content: center; /* Centers the menu */
+            align-items: center;
+        }
 
-.contact-card h2 {
-    margin-bottom: 20px;
-    font-size: 2em;
-}
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Adds space on the sides */
+        }
 
-.contact-card p {
-    font-size: 1.2em;
-    margin: 15px 0;
-}
+        .nav-logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: left; /* Ensures logo stays aligned to the left */
+        }
 
-.contact-card a {
-    color: #ff9800; /* Link color */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+        .menu-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centers the menu text */
+            color: white;
+            cursor: pointer;
+            font-size: 20px; /* Increased font size for better visibility */
+        }
 
-.contact-card a:hover {
-    color: #ffd740;
-}
+        .menu-icon i {
+            margin-right: 8px; /* Space between icon and text */
+        }
 
-.contact-card i {
-    margin-right: 10px;
-}
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #004d40;
+            text-align: center;
+        }
 
-</style>
+        .nav-links li {
+            list-style: none;
+            padding: 10px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ff9800;
+        }
+
+        .nav-links.open {
+            display: flex;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive for Desktop */
+        @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                justify-content: flex-end;
+                position: static;
+                flex-direction: row;
+                background-color: transparent;
+            }
+
+            .nav-links li {
+                margin-left: 20px;
+            }
+        }
+
+        /* Contact Info */
+        .contact-info {
+            padding: 100px 20px 50px;
+            text-align: center;
+            margin-top: 60px;
+            background-color: #f9f9f9;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .contact-info h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        /* Contact Card */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .contact-card {
+            background-color: #004d40;
+            color: white;
+            border-radius: 10px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            animation: bounceIn 1s ease-in;
+        }
+
+        .contact-card h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .contact-card p {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+
+        .contact-card a {
+            color: #ff9800;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: #ffd740;
+        }
+
+        .contact-card i {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            from, 20%, 40%, 60%, 80%, to {
+                -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+            }
+
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(0.3);
+                transform: scale(0.3);
+            }
+
+            20% {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+
+            40% {
+                -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale(1.03);
+                transform: scale(1.03);
+            }
+
+            80% {
+                -webkit-transform: scale(0.97);
+                transform: scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Contact Us</h1>
         <nav>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="nav-logo">Najma Halal Store</div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="location.html"><i class="fas fa-map-marker-alt"></i> Location</a></li>
                 <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
                 <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
             </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> <span>Menu</span>
+            </div>
         </nav>
     </header>
-    <main>
-        <!-- Contact Card Section -->
-        <div class="card-container">
-            <div class="contact-card">
-                <h2>Get in Touch</h2>
-                <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:206-466-8118">206-466-8118</a></p>
-                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:dolletrading@gmail.com">dolletrading@gmail.com</a></p>
-            </div>
+    
+    <!-- Contact Information Section -->
+    <section class="contact-info">
+        <h2>We're Here to Help!</h2>
+        <p><i class="fas fa-info-circle"></i> For any inquiries or assistance, feel free to contact us. We're available to answer all your questions regarding our products and services.</p>
+        <p><i class="fas fa-store-alt"></i> Visit us at:</p>
+        <p><strong>Najma Halal Store</strong><br><i class="fas fa-map-marker-alt"></i> 19039 International Blvd, Seatac, WA 98188</p>
+        <p><i class="fas fa-clock"></i> Store Hours:<br> 7/days: 9:00 AM - 8:00 PM </p>
+    </section>
+
+    <!-- Contact Card Section -->
+    <div class="card-container">
+        <div class="contact-card">
+            <h2>Get in Touch</h2>
+            <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:206-466-8118">206-466-8118</a></p>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:dolletrading@gmail.com">dolletrading@gmail.com</a></p>
         </div>
-    </main>
+    </div>
+
     <footer>
         <p>&copy; 2024 Najma Halal Store. All rights reserved.</p>
     </footer>
 
     <script>
-         
         function toggleMenu() {
-        var navLinks = document.getElementById('navLinks');
-        navLinks.classList.toggle('open');
-    }
-
-</script>
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>

@@ -6,10 +6,7 @@
     <title>Najma Halal Store - Home</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -34,13 +31,50 @@
 
         <!-- Cards Section -->
         <section class="card-container">
-            <!-- Card with Carousel -->
+            
+            <!-- Sambusa Card with Carousel (New) -->
             <div class="card">
                 <div class="carousel">
                     <div class="carousel-images">
-                        <img src="http://www.halalmeat2u.com/uploads/5/6/4/7/5647828/7591816_orig.jpg" class="carousel-image" alt="Product Image 1">
-                        <img src="http://www.halalmeat2u.com/uploads/5/6/4/7/5647828/454170_orig.jpg" class="carousel-image" alt="Product Image 2" style="display:none;">
-                        <img src="http://www.halalmeat2u.com/uploads/5/6/4/7/5647828/1421280740.png" class="carousel-image" alt="Product Image 3" style="display:none;">
+                        <img src="https://arbuz.com/wp-content/uploads/2009/07/Somsa-Samosa-Sambusa.jpg" class="carousel-image" alt="Sambusa Image 1">
+                        <img src="https://popmenucloud.com/cdn-cgi/image/width%3D1920%2Cheight%3D1920%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/qealyrjo/f160082f-1b12-45e1-be7c-9ecc2f05e97a.jpg" class="carousel-image" alt="Sambusa Image 2" style="display:none;">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5624f8eee4b0d232542ead5b/1526580213389-S0A9LRX7A3JDFGVTY653/image-asset.jpeg?format=1500w" class="carousel-image" alt="Sambusa Image 3" style="display:none;">
+                    </div>
+                    <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
+                    <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
+                </div>
+                <div class="card-content">
+                    <h3>Sambusa</h3>
+                    <p>Delicious crispy Sambusa made with love and care. Perfect for snacks or appetizers.</p>
+                    <a href="contact.html" class="button">Order Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Beverages Card with Carousel (Moved to second) -->
+            <div class="card">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="https://goodtimespizzasaginaw.com/wp-content/uploads/2021/01/Beverages.png" class="carousel-image" alt="Beverage Image 1">
+                        <img src="https://coffee-dictionary.com/wp-content/uploads/various-coffee-and-espresso-beverages.jpg" class="carousel-image" alt="Beverage Image 2" style="display:none;">
+                        <img src="https://observer.com/wp-content/uploads/sites/2/2019/07/icecream_lead.jpg?resize=768,512" class="carousel-image" alt="Beverage Image 3" style="display:none;">
+                    </div>
+                    <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
+                    <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
+                </div>
+                <div class="card-content">
+                    <h3>Beverages</h3>
+                    <p>Refreshing drinks and beverages available. Perfect for any occasion!</p>
+                    <a href="contact.html" class="button">Shop Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Fresh Halal Meat Card with Carousel -->
+            <div class="card">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="http://www.halalmeat2u.com/uploads/5/6/4/7/5647828/7591816_orig.jpg" class="carousel-image" alt="Fresh Halal Meat Image 1">
+                        <img src="http://www.halalmeat2u.com/uploads/5/6/4/7/5647828/454170_orig.jpg" class="carousel-image" alt="Fresh Halal Meat Image 2" style="display:none;">
+                        <img src="http://www.halalmeat2u.com/uploads/5/6/4/7/5647828/1421280740.png" class="carousel-image" alt="Fresh Halal Meat Image 3" style="display:none;">
                     </div>
                     <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
                     <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
@@ -52,13 +86,13 @@
                 </div>
             </div>
 
-            <!-- Repeat for each card -->
+            <!-- Organic Vegetables Card with Carousel -->
             <div class="card">
                 <div class="carousel">
                     <div class="carousel-images">
-                        <img src="https://shopperintelligence.com/wp-content/uploads/2021/07/Organic-fruits-and-vegetables.jpg" class="carousel-image" alt="Product Image 1">
-                        <img src="https://parade.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTkwNTgxNDMzNjk2OTIxNDY4/grocery-stores-with-organic-produce-jpg.webp" class="carousel-image" alt="Product Image 2" style="display:none;">
-                        <img src="https://www.skh.com/wp-content/uploads/2020/01/iStock-1155240408-1-800x500.jpg" class="carousel-image" alt="Product Image 3" style="display:none;">
+                        <img src="https://shopperintelligence.com/wp-content/uploads/2021/07/Organic-fruits-and-vegetables.jpg" class="carousel-image" alt="Organic Vegetables Image 1">
+                        <img src="https://parade.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTkwNTgxNDMzNjk2OTIxNDY4/grocery-stores-with-organic-produce-jpg.webp" class="carousel-image" alt="Organic Vegetables Image 2" style="display:none;">
+                        <img src="https://www.skh.com/wp-content/uploads/2020/01/iStock-1155240408-1-800x500.jpg" class="carousel-image" alt="Organic Vegetables Image 3" style="display:none;">
                     </div>
                     <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
                     <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
@@ -70,12 +104,13 @@
                 </div>
             </div>
 
+            <!-- Grocery Essentials Card with Carousel -->
             <div class="card">
                 <div class="carousel">
                     <div class="carousel-images">
-                        <img src="https://i0.wp.com/mostlyamelie.com/wp-content/uploads/2020/05/vegan-grocery-list.jpg?resize=1024%2C768&ssl=1" class="carousel-image" alt="Product Image 1">
-                        <img src="https://ufcw328.org/wp-content/uploads/2020/04/Shopping.jpg" class="carousel-image" alt="Product Image 2" style="display:none;">
-                        <img src="https://i.abcnewsfe.com/a/9d7b8306-3a18-49c8-a8aa-df933cba4921/grocery-store-florida-gty-jt-220803_1659550873827_hpEmbed_4x3.jpg?w=750" class="carousel-image" alt="Product Image 3" style="display:none;">
+                        <img src="https://i0.wp.com/mostlyamelie.com/wp-content/uploads/2020/05/vegan-grocery-list.jpg?resize=1024%2C768&ssl=1" class="carousel-image" alt="Grocery Essentials Image 1">
+                        <img src="https://ufcw328.org/wp-content/uploads/2020/04/Shopping.jpg" class="carousel-image" alt="Grocery Essentials Image 2" style="display:none;">
+                        <img src="https://i.abcnewsfe.com/a/9d7b8306-3a18-49c8-a8aa-df933cba4921/grocery-store-florida-gty-jt-220803_1659550873827_hpEmbed_4x3.jpg?w=750" class="carousel-image" alt="Grocery Essentials Image 3" style="display:none;">
                     </div>
                     <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
                     <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
@@ -83,25 +118,6 @@
                 <div class="card-content">
                     <h3>Grocery Essentials</h3>
                     <p>All your daily grocery essentials under one roof. Quality guaranteed!</p>
-                    <a href="contact.html" class="button">Shop Now <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <!-- New Beverage Card -->
-            <div class="card">
-                <div class="carousel">
-                    <div class="carousel-images">
-                        <img src="https://i.imgur.com/uLgGfIh.jpg" class="carousel-image" alt="Beverage Image 1">
-                        <img src="https://i.imgur.com/Y4nFmyA.jpg" class="carousel-image" alt="Beverage Image 2" style="display:none;">
-                        <img src="https://i.imgur.com/YK4Yrks.jpg" class="carousel-image" alt="Beverage Image 3" style="display:none;">
-                    
-                    </div>
-                    <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
-                    <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
-                </div>
-                <div class="card-content">
-                    <h3>Beverages</h3>
-                    <p>Refreshing drinks and beverages available. Perfect for any occasion!</p>
                     <a href="contact.html" class="button">Shop Now <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -149,10 +165,9 @@
 
         // Menu toggle for mobile
         function toggleMenu() {
-    var navLinks = document.getElementById('navLinks');
-    navLinks.classList.toggle('open'); // Toggles the 'open' class
-}
-
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('open'); // Toggles the 'open' class
+        }
     </script>
 </body>
 </html>

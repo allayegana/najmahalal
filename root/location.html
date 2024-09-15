@@ -4,29 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najma Halal Store - Location</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1001;
+            background-color: #004d40;
+            padding: 10px 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .menu-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .menu-icon i {
+            margin-right: 8px;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #004d40;
+            text-align: center;
+        }
+
+        .nav-links li {
+            list-style: none;
+            padding: 10px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ff9800;
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+
+        /* Responsive Menu for Desktop */
+        @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                justify-content: flex-end;
+                position: static;
+                flex-direction: row;
+                background-color: transparent;
+            }
+
+            .nav-links li {
+                margin-left: 20px;
+            }
+        }
+
+        /* Location Info */
+        .location-info {
+            padding: 100px 20px 50px;
+            text-align: center;
+            margin-top: 60px; /* Adjusts for fixed header */
+        }
+
+        .location-info h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .location-info p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        /* Map Container */
+        .map-container {
+            margin: 20px 0;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Our Location</h1>
         <nav>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="nav-logo">Najma Halal Store</div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="location.html"><i class="fas fa-map-marker-alt"></i> Location</a></li>
                 <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
                 <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
             </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> <span>Menu</span>
+            </div>
         </nav>
     </header>
+    
     <main>
         <div class="location-info">
-            <h2>Find us at:</h2>
+            <h2>Find Us At:</h2>
             <p><i class="fas fa-map-marker-alt"></i> Address: 19039 International Blvd, Seatac, WA 98188</p>
-            <p><i class="fas fa-phone-alt"></i> Contact: (123) 456-7890</p> <!-- Example contact number -->
+            <p><i class="fas fa-phone-alt"></i> Contact: (206) 466-8118</p> <!-- Example contact number -->
             <div class="map-container">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.5010634443056!2d-122.2969131843681!3d47.43500387917557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549059cf2ba9ae69%3A0x7e5c4f1f7414b0ac!2s19039%20International%20Blvd%2C%20SeaTac%2C%20WA%2098188%2C%20USA!5e0!3m2!1sen!2s!4v1694285450912!5m2!1sen!2s"
@@ -42,11 +180,7 @@
     <script>
         function toggleMenu() {
             var navLinks = document.getElementById('navLinks');
-            if (navLinks.style.display === 'block') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'block';
-            }
+            navLinks.classList.toggle('open');
         }
     </script>
 </body>

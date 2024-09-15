@@ -4,83 +4,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najma Halal Store - About Us</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
     <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1001;
+            background-color: #004d40;
+            padding: 10px 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .menu-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .menu-icon i {
+            margin-right: 8px;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #004d40;
+            text-align: center;
+        }
+
+        .nav-links li {
+            list-style: none;
+            padding: 10px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ff9800;
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+
+        /* Responsive Menu for Desktop */
+        @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                justify-content: flex-end;
+                position: static;
+                flex-direction: row;
+                background-color: transparent;
+            }
+
+            .nav-links li {
+                margin-left: 20px;
+            }
+        }
+
         /* About Section */
-.about {
-    text-align: center;
-    padding: 50px 20px;
-    margin-top: 100px; /* Add margin to adjust for the fixed header */
-}
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 100px; /* Adjusts for fixed header */
+        }
 
-.about p {
-    font-size: 1.2em;
-    margin: 20px 0;
-}
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
 
-/* Card Section for About Us */
-.card-container {
-    display: flex;
-    justify-content: center; /* Center the single card */
-    padding: 20px;
-}
+        .about p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
 
-.card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px; /* Adjusted width for one card */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
-    margin-top: 30px; /* Space below the about section */
-}
+        /* Card Section for About Us */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow increase on hover */
-}
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px; /* Adjusted width for a single card */
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 30px;
+        }
 
-.card-content {
-    padding: 20px;
-}
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-.card-content h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
+        .card-content {
+            padding: 20px;
+        }
 
-.card-content p {
-    font-size: 1.1em;
-    margin: 10px 0;
-}
+        .card-content h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
 
-/* Card Image */
-.card-image {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-}
+        .card-content p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
 
+        /* Card Image */
+        .card-image {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>About Najma Halal Store</h1>
         <nav>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="nav-logo">Najma Halal Store</div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="location.html"><i class="fas fa-map-marker-alt"></i> Location</a></li>
                 <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
                 <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
             </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> <span>Menu</span>
+            </div>
         </nav>
     </header>
+
     <main>
         <section class="about">
             <h2>Our Story</h2>
@@ -90,7 +217,7 @@
         <!-- Card Section -->
         <section class="card-container">
             <div class="card">
-                <!-- Add an Image here -->
+                <!-- Store Image -->
                 <img src="https://onestophalal.com/cdn/shop/articles/halal_mart-1703914670728_732efec0-f4f4-40e9-b3d7-e7fe981722ce_1200x.jpg?v=1703914737" alt="Najma Halal Store Image" class="card-image">
                 <div class="card-content">
                     <h3>More Than Just a Store</h3>
@@ -100,6 +227,7 @@
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Najma Halal Store. All rights reserved.</p>
     </footer>
@@ -107,11 +235,7 @@
     <script>
         function toggleMenu() {
             var navLinks = document.getElementById('navLinks');
-            if (navLinks.style.display === 'block') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'block';
-            }
+            navLinks.classList.toggle('open');
         }
     </script>
 </body>
