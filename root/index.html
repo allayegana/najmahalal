@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najma Halal Store - Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Stylesheets and FontAwesome -->
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Najma Halal Store</h1>
         <nav class="fixed-top">
-            <div class="menu-icon" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
+            <div class="header-container">
+                <!-- Logo on the left -->
+                <div class="logo-container">
+                    <img src="img/logn.jpg" alt="Najma Halal Store Logo" class="logo">
+                </div>
+
+                <!-- Title -->
+                <h1 class="store-title"> Najma Halal</h1>
+
+                <!-- Menu Icon -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i> Menu
+                </div>
             </div>
+
+            <!-- Navigation Links -->
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="location.html"><i class="fas fa-map-marker-alt"></i> Location</a></li>
@@ -23,7 +40,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section class="intro">
             <p>Welcome to the official website of Najma Halal Store, your trusted mini-market for fresh halal products and grocery items. Visit our store for the best deals!</p>
@@ -31,8 +48,7 @@
 
         <!-- Cards Section -->
         <section class="card-container">
-            
-            <!-- Sambusa Card with Carousel (New) -->
+            <!-- Sambusa Card -->
             <div class="card">
                 <div class="carousel">
                     <div class="carousel-images">
@@ -50,7 +66,7 @@
                 </div>
             </div>
 
-            <!-- Beverages Card with Carousel (Moved to second) -->
+            <!-- Beverages Card -->
             <div class="card">
                 <div class="carousel">
                     <div class="carousel-images">
@@ -68,7 +84,7 @@
                 </div>
             </div>
 
-            <!-- Fresh Halal Meat Card with Carousel -->
+            <!-- Fresh Halal Meat Card -->
             <div class="card">
                 <div class="carousel">
                     <div class="carousel-images">
@@ -85,42 +101,23 @@
                     <a href="contact.html" class="button">Contact Us <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-
-            <!-- Organic Vegetables Card with Carousel -->
-            <div class="card">
-                <div class="carousel">
-                    <div class="carousel-images">
-                        <img src="https://shopperintelligence.com/wp-content/uploads/2021/07/Organic-fruits-and-vegetables.jpg" class="carousel-image" alt="Organic Vegetables Image 1">
-                        <img src="https://parade.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTkwNTgxNDMzNjk2OTIxNDY4/grocery-stores-with-organic-produce-jpg.webp" class="carousel-image" alt="Organic Vegetables Image 2" style="display:none;">
-                        <img src="https://www.skh.com/wp-content/uploads/2020/01/iStock-1155240408-1-800x500.jpg" class="carousel-image" alt="Organic Vegetables Image 3" style="display:none;">
+                <!-- Organic Vegetables Card -->
+                <div class="card">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="https://shopperintelligence.com/wp-content/uploads/2021/07/Organic-fruits-and-vegetables.jpg" class="carousel-image" alt="Organic Vegetables Image 1">
+                            <img src="https://parade.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTkwNTgxNDMzNjk2OTIxNDY4/grocery-stores-with-organic-produce-jpg.webp" class="carousel-image" alt="Organic Vegetables Image 2" style="display:none;">
+                            <img src="https://www.skh.com/wp-content/uploads/2020/01/iStock-1155240408-1-800x500.jpg" class="carousel-image" alt="Organic Vegetables Image 3" style="display:none;">
+                        </div>
+                        <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
+                        <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
                     </div>
-                    <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
-                    <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
-                </div>
-                <div class="card-content">
-                    <h3>Organic Vegetables</h3>
-                    <p>Find a variety of organic vegetables and fresh produce at Najma Halal Store.</p>
-                    <a href="contact.html" class="button">Shop Now <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <!-- Grocery Essentials Card with Carousel -->
-            <div class="card">
-                <div class="carousel">
-                    <div class="carousel-images">
-                        <img src="https://i0.wp.com/mostlyamelie.com/wp-content/uploads/2020/05/vegan-grocery-list.jpg?resize=1024%2C768&ssl=1" class="carousel-image" alt="Grocery Essentials Image 1">
-                        <img src="https://ufcw328.org/wp-content/uploads/2020/04/Shopping.jpg" class="carousel-image" alt="Grocery Essentials Image 2" style="display:none;">
-                        <img src="https://i.abcnewsfe.com/a/9d7b8306-3a18-49c8-a8aa-df933cba4921/grocery-store-florida-gty-jt-220803_1659550873827_hpEmbed_4x3.jpg?w=750" class="carousel-image" alt="Grocery Essentials Image 3" style="display:none;">
+                    <div class="card-content">
+                        <h3>Organic Vegetables</h3>
+                        <p>Find a variety of organic vegetables and fresh produce at Najma Halal Store.</p>
+                        <a href="contact.html" class="button">Shop Now <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <button class="prev-btn" onclick="prevSlide(this)">&#10094;</button>
-                    <button class="next-btn" onclick="nextSlide(this)">&#10095;</button>
                 </div>
-                <div class="card-content">
-                    <h3>Grocery Essentials</h3>
-                    <p>All your daily grocery essentials under one roof. Quality guaranteed!</p>
-                    <a href="contact.html" class="button">Shop Now <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
         </section>
     </main>
 
@@ -129,7 +126,13 @@
     </footer>
 
     <script>
-        // Carousel functionality with auto-play
+        // Toggle menu visibility
+        function toggleMenu() {
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('open');
+        }
+
+        // Carousel functionality
         function nextSlide(button) {
             let carousel = button.parentElement;
             let images = carousel.querySelectorAll('.carousel-image');
@@ -162,12 +165,6 @@
 
         // Run auto-play every 3 seconds
         setInterval(autoPlayCarousel, 3000);
-
-        // Menu toggle for mobile
-        function toggleMenu() {
-            var navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('open'); // Toggles the 'open' class
-        }
     </script>
 </body>
 </html>

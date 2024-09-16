@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-    margin: 0;
+    margin: 20px;
     font-size: 2.5em;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -21,25 +21,46 @@ header {
     z-index: 1001;
     background-color: #004d40;
     padding: 10px 0;
-    text-align: center;
     color: white;
+}
+
+.header-container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Store title */
+.store-title {
+    font-size: 2em;
+    flex: 1;
+    text-align: left;
+    /* padding:25px 10px 0; */
+    margin-right: 5%;
 }
 
 /* Menu icon */
 .menu-icon {
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    z-index: 1002;
     color: white;
     cursor: pointer;
+    font-size: 1.2em;
 }
 
-/* Navigation links */
 .nav-links {
     display: none;
     background-color: #004d40;
@@ -66,7 +87,6 @@ header {
     color: #ff9800;
 }
 
-/* Responsive adjustments */
 @media (min-width: 768px) {
     .menu-icon {
         display: none;
@@ -88,7 +108,7 @@ header {
 .intro {
     text-align: center;
     padding: 100px 20px 50px;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 /* Button */
