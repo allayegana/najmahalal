@@ -106,18 +106,23 @@
             .nav-links li {
                 margin-left: 20px;
             }
+
+          
+        }
+
+        @media (max-width: 768px) {
+            .about p{
+                margin-bottom: 0; /* Reduce or remove margin-top for mobile */
+                padding-top: 0; /* Reduce padding if needed */
+            }
         }
 
         /* About Section */
         .about {
             text-align: center;
             padding: 50px 20px;
-            margin-top: 100px; /* Adjusts for fixed header */
-        }
-
-        .about h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            margin-top: 100px;
+             /* Adjusts for fixed header */
         }
 
         .about p {
@@ -172,13 +177,13 @@
 
         /* Footer */
         footer {
-    background-color: #004d40;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    position: relative; /* Change from fixed to relative */
-    bottom: 0;
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative; /* Change from fixed to relative */
+            bottom: 0;
     }
 
 
@@ -213,7 +218,6 @@
 
     <main>
         <section class="about">
-            <h2>Our Story</h2>
             <p>Najma Halal Store is a trusted mini-market located in Seatac, Washington. We provide fresh, high-quality halal products to our community. Our goal is to ensure our customers have access to the best halal groceries.</p>
         </section>
 
