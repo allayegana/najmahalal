@@ -199,10 +199,10 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
-}
+    position: relative; /* Change from fixed to relative */
+    bottom: 0;
+    }
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
