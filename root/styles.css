@@ -48,7 +48,7 @@ header {
 .store-title {
     font-size: 2em;
     flex: 1;
-    text-align: left;
+    text-align: center;
     /* padding:25px 10px 0; */
     margin-right: 5%;
 }
